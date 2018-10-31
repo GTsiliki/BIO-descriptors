@@ -1,0 +1,17 @@
+GOdescrCalculus-package
+                        Produce GO descriptors given an omics data
+dat1                    A sample data object
+dat1m1                  Serialized list of parameters for biclustering
+                        algorithm
+dat1m2                  Serialized list of parameters for hierarchical
+                        clustering algorithm
+dat1p                   A sample data object
+generate.descr.biclust
+                        Produce GO descriptors using bi-clustering
+                        algorithm
+generate.descr.hierar   Produce GO descriptors using hierarchical
+                        clustering algorithm
+generate.param.model    A 'training' function to produce a serialized
+                        list for the parameters needed to produce GO
+                        descriptors
+read.in.json.for.pred   Read in function for json files for prediction

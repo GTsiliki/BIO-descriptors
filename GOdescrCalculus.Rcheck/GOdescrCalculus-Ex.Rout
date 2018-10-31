@@ -1,0 +1,364 @@
+
+R version 3.1.3 (2015-03-09) -- "Smooth Sidewalk"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "GOdescrCalculus"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> library('GOdescrCalculus')
+Loading required package: RCurl
+Loading required package: bitops
+Loading required package: pmml
+Loading required package: XML
+Loading required package: org.Hs.eg.db
+Loading required package: AnnotationDbi
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following object is masked from ‘package:stats’:
+
+    xtabs
+
+The following objects are masked from ‘package:base’:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, as.vector, cbind, colnames, do.call, duplicated,
+    eval, evalq, get, intersect, is.unsorted, lapply, mapply, match,
+    mget, order, paste, pmax, pmax.int, pmin, pmin.int, rank, rbind,
+    rep.int, rownames, sapply, setdiff, sort, table, tapply, union,
+    unique, unlist, unsplit
+
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: GenomeInfoDb
+Loading required package: S4Vectors
+Loading required package: IRanges
+
+Attaching package: ‘AnnotationDbi’
+
+The following object is masked from ‘package:GenomeInfoDb’:
+
+    species
+
+Loading required package: DBI
+
+Loading required package: GSEABase
+Loading required package: annotate
+
+Attaching package: ‘annotate’
+
+The following object is masked from ‘package:GenomeInfoDb’:
+
+    organism
+
+Loading required package: graph
+
+Attaching package: ‘graph’
+
+The following object is masked from ‘package:XML’:
+
+    addNode
+
+Loading required package: GOstats
+Loading required package: Category
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:IRanges’:
+
+    expand
+
+The following objects are masked from ‘package:base’:
+
+    crossprod, tcrossprod
+
+Loading required package: GO.db
+
+
+Attaching package: ‘GOstats’
+
+The following object is masked from ‘package:AnnotationDbi’:
+
+    makeGOGraph
+
+Loading required package: Rgraphviz
+Loading required package: grid
+
+Attaching package: ‘Rgraphviz’
+
+The following object is masked from ‘package:annotate’:
+
+    toFile
+
+Loading required package: blockcluster
+blockcluster version 3.0.2 loaded
+
+----------------
+Copyright (C)  <MODAL team @INRIA,Lille & U.M.R. C.N.R.S. 6599 Heudiasyc, UTC>
+Please post questions and bugs at: <https://gforge.inria.fr/forum/forum.php?forum_id=11190&group_id=3679>
+
+Loading required package: vegan
+Loading required package: permute
+Loading required package: lattice
+This is vegan 2.0-10
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("GOdescrCalculus-package")
+> ### * GOdescrCalculus-package
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: GOdescrCalculus-package
+> ### Title: Produce GO descriptors given an omics data
+> ### Aliases: GOdescrCalculus-package GOdescrCalculus
+> ### Keywords: package
+> 
+> ### ** Examples
+> 
+> data("dat1p")
+> data("dat1m1")
+> 
+> adInfo<- list()
+> 
+> res1<- read.in.json.for.pred(dat1p, dat1m1, adInfo) 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("dat1")
+> ### * dat1
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: dat1
+> ### Title: A sample data object
+> ### Aliases: dat1
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> data(dat1)
+> ## maybe str(dat1) ; plot(dat1) ...
+> 
+> 
+> 
+> cleanEx()
+> nameEx("dat1m1")
+> ### * dat1m1
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: dat1m1
+> ### Title: Serialized list of parameters for biclustering algorithm
+> ### Aliases: dat1m1
+> ### Keywords: datasetsm1
+> 
+> ### ** Examples
+> 
+> data(dat1m1)
+> ## maybe str(dat1m1) ; plot(dat1m1) ...
+> 
+> 
+> 
+> cleanEx()
+> nameEx("dat1m2")
+> ### * dat1m2
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: dat1m2
+> ### Title: Serialized list of parameters for hierarchical clustering
+> ###   algorithm
+> ### Aliases: dat1m2
+> ### Keywords: datasetsm2
+> 
+> ### ** Examples
+> 
+> data(dat1m2)
+> ## maybe str(dat1m2) ; plot(dat1m2) ...
+> 
+> 
+> 
+> cleanEx()
+> nameEx("dat1p")
+> ### * dat1p
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: dat1p
+> ### Title: A sample data object
+> ### Aliases: dat1p
+> ### Keywords: datasetsp
+> 
+> ### ** Examples
+> 
+> data(dat1p)
+> ## maybe str(dat1p) ; plot(dat1p) ...
+> 
+> 
+> 
+> cleanEx()
+> nameEx("generate.descr.biclust")
+> ### * generate.descr.biclust
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: generate.descr.biclust
+> ### Title: Produce GO descriptors using bi-clustering algorithm
+> ### Aliases: generate.descr.biclust
+> ### Keywords: generateBiclust
+> 
+> ### ** Examples
+> 
+> ##---- Should be DIRECTLY executable !! ----
+> ##-- ==>  Define data, use random,
+> ##--	or do  help(data=index)  for the standard data sets.
+> 
+> data("dat1p")
+> data("dat1m1")
+> 
+> adInfo<- list()
+> 
+> pred.res<- generate.descr.biclust(dat1p, dat1m1, adInfo) 
+Warning in .generateExtraRows(tab, keys, jointype) :
+  'select' resulted in 1:many mapping between keys and return rows
+Warning in .generateExtraRows(tab, keys, jointype) :
+  'select' resulted in 1:many mapping between keys and return rows
+Co-Clustering successfully terminated! 
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("generate.descr.hierar")
+> ### * generate.descr.hierar
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: generate.descr.hierar
+> ### Title: Produce GO descriptors using hierarchical clustering algorithm
+> ### Aliases: generate.descr.hierar
+> ### Keywords: generateHierar
+> 
+> ### ** Examples
+> 
+> ##---- Should be DIRECTLY executable !! ----
+> ##-- ==>  Define data, use random,
+> ##--	or do  help(data=index)  for the standard data sets.
+> 
+> data("dat1p")
+> data("dat1m2")
+> 
+> adInfo<- list()
+> 
+> pred.res<- generate.descr.hierar(dat1p, dat1m2, adInfo) 
+Warning in .generateExtraRows(tab, keys, jointype) :
+  'select' resulted in 1:many mapping between keys and return rows
+Warning in .generateExtraRows(tab, keys, jointype) :
+  'select' resulted in 1:many mapping between keys and return rows
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("generate.param.model")
+> ### * generate.param.model
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: generate.param.model
+> ### Title: A 'training' function to produce a serialized list for the
+> ###   parameters needed to produce GO descriptors
+> ### Aliases: generate.param.model
+> ### Keywords: generateParamModel
+> 
+> ### ** Examples
+> 
+> ##---- Should be DIRECTLY executable !! ----
+> ##-- ==>  Define data, use random,
+> ##--	or do  help(data=index)  for the standard data sets.
+> 
+> data("dat1")
+> 
+> predF<- list()
+> 
+> required.param<- list(key='UNIPROT',onto=c('GO','MF'),pvalCutoff=0.05,nclust=c(3,2),FUN='mean')
+> 
+> params1<- generate.param.model(dat1,predF,required.param)
+> 
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("read.in.json.for.pred")
+> ### * read.in.json.for.pred
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: read.in.json.for.pred
+> ### Title: Read in function for json files for prediction
+> ### Aliases: read.in.json.for.pred
+> ### Keywords: readjsonp
+> 
+> ### ** Examples
+> 
+> ##---- Should be DIRECTLY executable !! ----
+> ##-- ==>  Define data, use random,
+> ##--	or do  help(data=index)  for the standard data sets.
+> 
+> data("dat1p")
+> data("dat1m1")
+> 
+> adInfo<- list()
+> 
+> res1<- read.in.json.for.pred(dat1p, dat1m1, adInfo) 
+> 
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  990.103 9.367 1002.527 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

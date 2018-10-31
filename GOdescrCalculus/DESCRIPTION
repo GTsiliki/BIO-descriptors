@@ -1,0 +1,10 @@
+Package: GOdescrCalculus
+Type: Package
+Title: Creates GO descriptors
+Version: 1.0
+Date: 2015-04-16
+Author: Georgia Tsiliki
+Maintainer: Georgia Tsiliki <gtsiliki@central.ntua.gr>
+Depends: RCurl, pmml, org.Hs.eg.db, GSEABase, GOstats, Rgraphviz, blockcluster, Matrix, vegan
+Description: This package produces GO descriptors based on GO ontology and proteomics data supplied. 
+License: GPL-2

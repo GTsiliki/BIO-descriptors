@@ -1,0 +1,33 @@
+\name{dat1m2}
+\alias{dat1m2}
+\docType{data}
+
+\title{Serialized list of parameters for hierarchical clustering algorithm
+}
+
+\description{A character string for a serialized parameters list, i.e. a set of values needed from the biclusteruing algorithm in order to produce the GO descriptors. The list includes 'key' (e.g. 'UNIPROT'), 'onto' (e.g. c('GO','MF')), 'pvalCutoff' for hypergeometric test (e.g. 0.05),
+'distMethod' (e.g. 'euclidean' or other alternatives from the vegan package), 'hclustMethod' (e.g. 'ward.D2' or other alternatives from the vegan package), 'nORh' th enumber of clusters in the data (e.g. 10), and 'FUN' to specify the function used to summarize the omics data (e.g. 'mean').
+}
+
+\usage{data("dat1m2")}
+
+\format{A character string
+}
+
+\details{
+Example set of parameters needed for generate.descr.hierar function
+}
+
+\source{The source of this function is in the
+}
+
+\references{
+There are no references
+}
+
+\examples{
+data(dat1m2)
+## maybe str(dat1m2) ; plot(dat1m2) ...
+}
+
+\keyword{datasetsm2}
